@@ -59,7 +59,7 @@ Fabric_Client.newDefaultKeyValueStore({ path: store_path
 	};
 
 	// send the query proposal to the peer
-	return channel.queryByChaincode(request);
+	return channel.queryByChaincode(request,true);
 }).then((query_responses) => {
 	console.log("Query has completed, checking results");
 	// query_responses could have more than one  results if there multiple peers were used as targets
